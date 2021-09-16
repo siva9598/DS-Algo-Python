@@ -1,0 +1,54 @@
+A major difference between lists and strings is that lists can be modified while strings cannot. This is referred to as mutability.
+
+Operation Name		Operator			Explanation
+membership			in					Set membership
+length				len					Returns the cardinality of the set
+|					aset | otherset		Returns a new set with all elements from both sets
+&					aset & otherset		Returns a new set with only those elements common to both sets
+-					aset - otherset		Returns a new set with all items from the first set not in second
+<=					aset <= otherset	Asks whether all elements of the first set are in the second
+
+Set methods
+
+union			aset.union(otherset)		Returns a new set with all elements from both sets
+intersection	aset.intersection(otherset)	Returns a new set with only those elements common to both sets
+difference		aset.difference(otherset)	Returns a new set with all items from first set not in second
+issubset		aset.issubset(otherset)		Asks whether all elements of one set are in the other
+add				aset.add(item)				Adds item to the set
+remove			aset.remove(item)			Removes item from the set
+pop				aset.pop()					Removes an arbitrary element from the set
+clear			aset.clear()				Removes all elements from the set
+
+>>> mySet
+{False, 4.5, 3, 6, 'cat'}
+>>> yourSet = {99,3,100}
+>>> mySet.union(yourSet)
+{False, 4.5, 3, 100, 6, 'cat', 99}
+>>> mySet | yourSet
+{False, 4.5, 3, 100, 6, 'cat', 99}
+>>> mySet.intersection(yourSet)
+{3}
+>>> mySet & yourSet
+{3}
+>>> mySet.difference(yourSet)
+{False, 4.5, 6, 'cat'}
+>>> mySet - yourSet
+{False, 4.5, 6, 'cat'}
+>>> {3,100}.issubset(yourSet)
+True
+>>> {3,100}<=yourSet
+True
+>>> mySet.add("house")
+>>> mySet
+{False, 4.5, 3, 6, 'house', 'cat'}
+>>> mySet.remove(4.5)
+>>> mySet
+{False, 3, 6, 'house', 'cat'}
+>>> mySet.pop()
+False
+>>> mySet
+{3, 6, 'house', 'cat'}
+>>> mySet.clear()
+>>> mySet
+set()
+>>>
