@@ -1,0 +1,24 @@
+>>> phoneext={'david':1410,'brad':1137}
+>>> phoneext
+{'brad': 1137, 'david': 1410}
+>>> phoneext.keys()
+dict_keys(['brad', 'david'])
+>>> list(phoneext.keys())
+['brad', 'david']
+>>> phoneext.values()
+dict_values([1137, 1410])
+>>> list(phoneext.values())
+[1137, 1410]
+>>> phoneext.items()
+dict_items([('brad', 1137), ('david', 1410)])
+>>> list(phoneext.items())
+[('brad', 1137), ('david', 1410)]
+>>> phoneext.get("kent")
+>>> phoneext.get("kent","NO ENTRY")
+'NO ENTRY'
+
+keys	adict.keys()	    Returns the keys of the dictionary in a dict_keys object
+values	adict.values()	    Returns the values of the dictionary in a dict_values object
+items	adict.items()	    Returns the key-value pairs in a dict_items object
+get	    adict.get(k)	    Returns the value associated with k, None otherwise
+get	    adict.get(k,alt)	Returns the value associated with k, alt otherwise
